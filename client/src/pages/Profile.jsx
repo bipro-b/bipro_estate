@@ -145,7 +145,7 @@ export default function Profile() {
         <span className="text-red-700 cursor-pointer">Sign Out</span>
       </div>
       <p className="text-red-700">{error?error :''}</p>
-      <p className="text-green-700 mt-5">{updateSuccess? 'User is updated successfully':''}</p>
+      <p className="text-green-700 mt-5">{updateSuccess? 'User is updated successfully!':''}</p>
     </div>
   );
 }
