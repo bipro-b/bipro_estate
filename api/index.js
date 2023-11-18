@@ -1,9 +1,11 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import cookieParser from "cookie-parser";
+
 import userRouter from "./routes/user.route.js";
 import authRouter from "./routes/auth.route.js";
-import cookieParser from "cookie-parser";
+import listingRouter from "./routes/listing.routes.js"
 dotenv.config();
 
 mongoose
@@ -29,6 +31,7 @@ app.listen(port, () => {
 
 app.use("/api/user", userRouter);
 app.use("/api/auth", authRouter);
+app.use("/api/listing", listingRouter);
 
 app.get("/", (req, res) => {
   res.send("Server is running!");
