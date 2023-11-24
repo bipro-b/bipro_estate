@@ -226,35 +226,34 @@ export default function Profile() {
       <p className="text-red-700 mt-5">
         {showListingError ? "Error showing listing" : ""}
       </p>
-      {userListing.length > 0 &&
-         <div className="flex flex-col gap-4" >
-         <h1 className="text-center mt-7 text-2xl font-semibold">Your listing</h1>
-          {
-            userListing.map((list) => (
-          <div key={list._id} className="border rounded-lg p-3 flex justify-between items-center gap-4 ">
-            <Link to={`/listing/${list._id}`}>
-              <img
-                src={list?.imageUrls[0]}
-                alt="list cover"
-                className="h-16 w-16 object-contain "
-              />
-            </Link>
-            <Link className="flex-1" to={`/listing/${list._id}`}>
-              <p>{list.name}</p>
-            </Link>
-            <div className="flex flex-col items-center">
-              <button className="text-red-700 uppercase">
-                Delete
-              </button>
-              <button className="text-green-700 uppercase">
-                Edit
-              </button>
+      {userListing.length > 0 && (
+        <div className="flex flex-col gap-4">
+          <h1 className="text-center mt-7 text-2xl font-semibold">
+            Your listing
+          </h1>
+          {userListing.map((list) => (
+            <div
+              key={list._id}
+              className="border rounded-lg p-3 flex justify-between items-center gap-4 "
+            >
+              <Link to={`/listing/${list._id}`}>
+                <img
+                  src={list?.imageUrls[0]}
+                  alt="list cover"
+                  className="h-16 w-16 object-contain "
+                />
+              </Link>
+              <Link className="flex-1" to={`/listing/${list._id}`}>
+                <p>{list.name}</p>
+              </Link>
+              <div className="flex flex-col items-center">
+                <button className="text-red-700 uppercase">Delete</button>
+                <button className="text-green-700 uppercase">Edit</button>
+              </div>
             </div>
-          </div>
-        ))
-          }
-         </div>
-        }
+          ))}
+        </div>
+      )}
     </div>
   );
 }
