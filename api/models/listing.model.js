@@ -33,6 +33,10 @@ const listingSchema = new mongoose.Schema({
         type: Boolean,
         required: true
     },
+    parking:{
+        type:Boolean,
+        required:true
+    },
     type:{
         type: String,
         required: true,
