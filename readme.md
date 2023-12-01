@@ -42,33 +42,38 @@ Follow these instructions to get a copy of the project up and running on your lo
    git clone https://github.com/your-username/BIPRO-Estate.git
    
 
-Navigate to the project directory:
+2. Navigate to the project directory:
+
+    ```bash
+    cd BIPRO-Estate
 
 
-cd BIPRO-Estate
+3. Install dependencies:
+   ```bash
+    npm install
 
-Install dependencies:
-
- npm install
-
-##Create a .env file in the root directory and configure your MongoDB connection:
-
+4. Create a .env file in the root directory and configure your MongoDB connection:
+   ```bash
     REACT_APP_API_BASE_URL=http://localhost:3001/api
     REACT_APP_PUBLIC_URL=http://localhost:3000 
+
 Replace the values with your MongoDB connection details.
 
-Start the frontend and backend:
+## Start the frontend and backend:
 
-Start the backend server
-npm run start:server
+1. Start the backend server
+   ```bash
+   npm run start:server
 
-Start the frontend development server
-npm run start:client
+2. Start the frontend development server
+    ```bash
+    np run dev
+
 The application will be accessible at http://localhost:3000.
 
-Contributing
+## Contributing
 Feel free to contribute by opening issues, proposing new features, or submitting pull requests. Contributions are always welcome!
 
-License
+## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
