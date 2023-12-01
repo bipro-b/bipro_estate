@@ -66,7 +66,7 @@ export default function Listing() {
                     background: `url(${url}) center no-repeat`,
                     backgroundSize: 'cover',
                   }}
-                ></div>
+                > <img className='h-[550px] w-full' src={url} /> </div>
               </SwiperSlide>
             ))}
           </Swiper>
